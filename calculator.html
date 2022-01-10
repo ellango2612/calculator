@@ -41,23 +41,23 @@
     </div>
 
     <script>
-        const initialBalance = Number(document.querySelector('#initialBalance')); 
+        const initialBalance = Number(document.querySelector('#initialBalance'));
         const interestRate = Number(document.querySelector('#interestRate'));
         const interestApplied = Number(document.querySelector('#interestApplied'));
         const timePeriod = Number(document.querySelector('#timePeriod'));
         const output = Number(document.querySelector('#output'));
         const solve = Number(document.querySelector('#solve'));
-        
-        
 
-        solve.addEventListener('click', calculate) 
+
+
+        solve.addEventListener('click', calculate)
 
         console.log("hello");
 
         // let resetButton;
         function calculate() {
             console.debug("calculate");
-            // output = initialBalance * ((interestRate/interestApplied + 1) *Math.pow (interestApplied*timePeriod)) 
+            // output = initialBalance * ((interestRate/interestApplied + 1) *Math.pow (interestApplied*timePeriod))
             amount = initialBalance * (Math.pow((1 + (interestRate/interestApplied)), (interestApplied*timePeriod)))
             output.value = amount
         // console.log("result: ", result)
